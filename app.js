@@ -1,7 +1,5 @@
 let api = 'https://www.omdbapi.com/?apikey=61e576a4&t='
 
-// 61e576a4&t
-
 // fetch(api).then((data)=>{
 //     return data.json()
 // }).then((data)=>{
