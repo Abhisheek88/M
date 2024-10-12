@@ -1,0 +1,146 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #0f0f0f;
+    margin: 0;
+}
+.error{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font:bold;
+    margin-top: 130px;
+   
+}
+.header{
+    width: 700px;
+    margin: 30px auto;
+    text-align: center;
+}
+.searchbar{
+    border-radius: 12px;
+    display: flex;
+    /* box-shadow: 2px 2px 10px  red; */
+    box-shadow: 12px 12px 12px   rgb(181, 123, 123),
+    -10px -10px 10px rgb(190, 77, 77);
+    
+}
+input{
+    width: 560px;
+    padding: 16px 20px; 
+    border-radius: 12px 0 0 12px;
+    font-size: 20px;
+    background-color: #ffffff23;
+    color: white;
+    transition: .3s;
+    border: none;
+}
+input:focus{
+    outline: none;
+    background-color: #7e39391d;
+}
+h2{
+    color: white;
+    font-size: xx-large;
+    font-weight: 400;
+}
+.top{
+    color: white;
+    font-size: medium;
+    font-weight: 600;
+}
+.btn{
+    background-color: rgba(255, 21, 0, 0.609);
+    width: 140px;
+    border: none;
+    font-size: 16px;
+    color: white;
+    border-radius: 0 12px 12px 0;
+    cursor: pointer;
+    transition: .3s;
+}
+.btn:hover{
+    background-color: rgb(255, 0, 4);
+
+}
+.logo{
+    height: 80px;
+    display: block;
+    margin: auto;
+}
+
+.suggestion{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 245, 229);
+    padding: 3px 12px;
+    font-size: 14px;
+    color: rgb(68, 43, 0);
+    margin: 10px;
+    border-radius: 20px;
+}
+.hidden{
+    display: none;
+}
+.banner{
+    position: relative;
+}
+.poster{
+    width: 360px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 12px 12px 0;
+  }
+
+.card{
+    margin: auto;
+    margin-top: 60px;
+    width: 740px;
+    height: 520px;
+    padding-left: 16px;
+    position: relative;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    background: black;
+    color: white;
+    resize: horizontal;
+  }
+
+  @property --angle{
+    syntax: "<angle>";
+    initial-value:0deg;
+    inherits: false;
+  }
+  
+  .card::after , .card::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99 , #006aff , #ff0095, #ff4545 );
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    padding: 4px;
+    border-radius: 16px;
+    animation: 3s spin linear infinite;
+  } 
+
+  .card::before{
+    filter: blur(1.5rem);
+    opacity: .5;
+  }
+  @keyframes spin{
+    from{
+     --angle:0deg;
+    }
+    to{
+      --angle:360deg;
+    }
+  }
+
+ 
+ 
